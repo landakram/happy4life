@@ -8,4 +8,9 @@
 
 @interface ParseStarterProjectViewController : UIViewController
 
+@property (nonatomic, strong) NSString *friendUsername;
+
+@property (nonatomic, strong) IBOutlet UIButton *notificationButton;
+@property (nonatomic, strong) IBOutlet UITextField *textField;
+
 @end

@@ -9,6 +9,9 @@
 #import <Parse/Parse.h>
 
 @implementation ParseStarterProjectViewController
+@synthesize notificationButton;
+@synthesize textField;
+@synthesize friendUsername;
 
 #pragma mark -
 #pragma mark UIViewController
@@ -16,6 +19,12 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [notificationButton addTarget:self action:@selector(notificationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    NSString *buttonTitle = [NSString stringWithFormat:@"Inspire %@", self.friendUsername];
+    [notificationButton setTitle:buttonTitle forState:UIControlStateNormal];
+    
+    [textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -23,6 +32,19 @@
     [super didReceiveMemoryWarning];
 
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)notificationButtonPressed:(id)sender {
+    [sender setEnabled:NO];
+    
+    [notificationButton setTitle:@"" forState:UIControlStateNormal];
+    
+    NSString *textFromTextField = textField.text;
+    
+    PFPush *push = [[PFPush alloc] init];
+    [push setChannel:self.friendUsername];
+    [push setMessage:textFromTextField];
+    [push sendPushInBackground];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

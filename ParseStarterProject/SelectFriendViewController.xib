@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectFriendViewController">
+            <connections>
+                <outlet property="firstFriendButton" destination="2f2-vp-UoP" id="20V-vy-O6H"/>
+                <outlet property="secondFriendButton" destination="ygu-Wp-lmS" id="sO7-YB-4Ul"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygu-Wp-lmS">
+                    <rect key="frame" x="180" y="81" width="106" height="94"/>
+                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Person 2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-Cb-yPK">
+                    <rect key="frame" x="35" y="212" width="106" height="94"/>
+                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Person 3">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIo-7i-85q">
+                    <rect key="frame" x="180" y="212" width="106" height="94"/>
+                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Person 4">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-vp-UoP">
+                    <rect key="frame" x="35" y="81" width="106" height="94"/>
+                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Person 1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

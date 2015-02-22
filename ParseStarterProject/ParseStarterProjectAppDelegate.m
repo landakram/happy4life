@@ -17,6 +17,7 @@
 
 #import "ParseStarterProjectAppDelegate.h"
 #import "ParseStarterProjectViewController.h"
+#import "SelectFriendViewController.h"
 
 @implementation ParseStarterProjectAppDelegate
 
@@ -53,7 +54,10 @@
 
     // Override point for customization after application launch.
 
-    self.window.rootViewController = self.viewController;
+    SelectFriendViewController *viewController = [[SelectFriendViewController alloc] init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 
     if (application.applicationState != UIApplicationStateBackground) {
@@ -84,8 +88,33 @@
                                                          UIRemoteNotificationTypeAlert |
                                                          UIRemoteNotificationTypeSound)];
     }
+    
+    [self setUpUsername];
+    [self setUpFriends];
+    [self listenToMyChannel];
 
     return YES;
+}
+
+- (void)setUpUsername {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"LooseGoose" forKey:@"username"];
+}
+
+- (void)setUpFriends {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *myFriends = @[ @"Adrian", @"Randell" ];
+    [userDefaults setObject:myFriends forKey:@"friends"];
+}
+
+- (void)listenToMyChannel {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *myUsername = [userDefaults stringForKey:@"username"];
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:myUsername forKey:@"channels"];
+    [currentInstallation saveInBackground];
 }
 
 #pragma mark Push Notifications
