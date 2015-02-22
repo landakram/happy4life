@@ -98,13 +98,13 @@
 
 - (void)setUpUsername {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@"LooseGoose" forKey:@"username"];
+    [userDefaults setObject:@"Adrian" forKey:@"username"];
 }
 
 - (void)setUpFriends {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSArray *myFriends = @[ @"Adrian", @"Randell" ];
+    NSArray *myFriends = @[ @"LooseGoose", @"Randell" ];
     [userDefaults setObject:myFriends forKey:@"friends"];
 }
 

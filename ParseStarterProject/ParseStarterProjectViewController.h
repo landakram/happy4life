@@ -6,7 +6,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParseStarterProjectViewController : UIViewController
+@interface ParseStarterProjectViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *friendUsername;
 

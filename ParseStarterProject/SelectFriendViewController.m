@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Choose a friend";
     
     NSArray *friends = [[NSUserDefaults standardUserDefaults] arrayForKey:@"friends"];
     NSString *firstFriend = [friends objectAtIndex:0];

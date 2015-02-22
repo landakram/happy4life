@@ -19,12 +19,12 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = [NSString stringWithFormat:@"Inspire %@", self.friendUsername];
     [notificationButton addTarget:self action:@selector(notificationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     NSString *buttonTitle = [NSString stringWithFormat:@"Inspire %@", self.friendUsername];
     [notificationButton setTitle:buttonTitle forState:UIControlStateNormal];
     
-    [textField becomeFirstResponder];
+    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,9 +34,18 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [textField becomeFirstResponder];
+}
+
 - (void)notificationButtonPressed:(id)sender {
     [sender setEnabled:NO];
     
+    [self sendPushNotification];
+}
+
+- (void)sendPushNotification {
     PFPush *push = [[PFPush alloc] init];
     [push setChannel:self.friendUsername];
     
@@ -52,6 +61,11 @@
                                                        delegate:nil
                                               cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
     [alertView show];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self sendPushNotification];
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
