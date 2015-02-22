@@ -37,13 +37,15 @@
 - (void)notificationButtonPressed:(id)sender {
     [sender setEnabled:NO];
     
-    [notificationButton setTitle:@"" forState:UIControlStateNormal];
-    
     NSString *textFromTextField = textField.text;
     
     PFPush *push = [[PFPush alloc] init];
     [push setChannel:self.friendUsername];
-    [push setMessage:textFromTextField];
+    
+    NSString *me = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    NSString *message = [NSString stringWithFormat:@"%@: %@", me, message];
+    
+    [push setMessage:message];
     [push sendPushInBackground];
 }
 
