@@ -45,6 +45,13 @@
     
     [push setMessage:message];
     [push sendPushInBackground];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sent!"
+                                                        message:[NSString stringWithFormat:@"%@ just received your inspirational thought.", friendUsername]
+                                                       delegate:nil
+                                              cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+    [alertView show];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
