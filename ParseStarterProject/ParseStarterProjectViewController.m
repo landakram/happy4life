@@ -48,7 +48,7 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sent!"
-                                                        message:[NSString stringWithFormat:@"%@ just received your inspirational thought.", friendUsername]
+                                                        message:[NSString stringWithFormat:@"%@ just received your inspirational thought: %@", friendUsername, textField.text]
                                                        delegate:nil
                                               cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
     [alertView show];
