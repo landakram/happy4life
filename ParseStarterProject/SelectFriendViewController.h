@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectFriendViewController : UIViewController
+@interface SelectFriendViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
 
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
-@property (nonatomic, strong) IBOutlet UIButton *firstFriendButton;
-@property (nonatomic, strong) IBOutlet UIButton *secondFriendButton;
+@property (nonatomic, strong) NSArray *friends;
 
 @end

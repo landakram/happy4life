@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LaunchScreenViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="FNj-Ji-h4M">
+                    <rect key="frame" x="-9" y="-15" width="617" height="630"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="h4l_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-2f-lFN">
+                    <rect key="frame" x="76" y="203" width="168" height="79"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="124" y="267" width="168" height="79"/>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FNj-Ji-h4M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-15" id="15M-MB-g49"/>
+                <constraint firstAttribute="bottom" secondItem="FNj-Ji-h4M" secondAttribute="bottom" constant="-47" id="5hL-kD-4dh"/>
+                <constraint firstAttribute="centerX" secondItem="eHw-2f-lFN" secondAttribute="centerX" id="CYA-wR-ZD7"/>
+                <constraint firstItem="FNj-Ji-h4M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-9" id="JPR-28-3CO"/>
+                <constraint firstAttribute="trailing" secondItem="FNj-Ji-h4M" secondAttribute="trailing" constant="-288" id="aSa-Oi-fEa"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="blank_bg.png" width="319" height="551"/>
+        <image name="h4l_logo.png" width="217" height="102"/>
+    </resources>
+</document>

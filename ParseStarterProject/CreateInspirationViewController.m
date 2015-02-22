@@ -4,14 +4,16 @@
 //  Copyright 2011-present Parse Inc. All rights reserved.
 //
 
-#import "ParseStarterProjectViewController.h"
+#import "CreateInspirationViewController.h"
 
 #import <Parse/Parse.h>
 
-@implementation ParseStarterProjectViewController
+@implementation CreateInspirationViewController
 @synthesize notificationButton;
 @synthesize textField;
 @synthesize friendUsername;
+@synthesize imageView;
+@synthesize descriptionLabel;
 
 #pragma mark -
 #pragma mark UIViewController
@@ -20,11 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [NSString stringWithFormat:@"Inspire %@", self.friendUsername];
+    
     [notificationButton addTarget:self action:@selector(notificationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     NSString *buttonTitle = [NSString stringWithFormat:@"Inspire %@", self.friendUsername];
     [notificationButton setTitle:buttonTitle forState:UIControlStateNormal];
     
+    NSString *description = [NSString stringWithFormat:@"Say something inspirational to %@:", self.friendUsername];
+    descriptionLabel.text = description;
+    
     self.textField.delegate = self;
+    
+    notificationButton.buttonColor = [UIColor turquoiseColor];
+    notificationButton.shadowColor = [UIColor greenSeaColor];
+    notificationButton.shadowHeight = 3.0f;
+    notificationButton.cornerRadius = 6.0f;
+    [notificationButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [notificationButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    [imageView setImage:[UIImage imageNamed:[self.friendUsername lowercaseString]]];
+    
+    textField.layer.cornerRadius = 5;
+    textField.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,9 +81,7 @@
     [alertView show];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self sendPushNotification];
-    return YES;
+- (void)textViewDidEndEditing:(UITextView *)textView {
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

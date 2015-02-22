@@ -23,8 +23,16 @@
     [googleButton addTarget:self action:@selector(googleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 - (void) googleButtonPressed:(UIButton *)button {
     SelectFriendViewController *friendViewController = [[SelectFriendViewController alloc] init];
+    
+    [self.navigationController setNavigationBarHidden:NO];
     [self.navigationController pushViewController:friendViewController animated:YES];
 }
 

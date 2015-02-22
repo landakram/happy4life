@@ -16,7 +16,7 @@
 // #import <ParseCrashReporting/ParseCrashReporting.h>
 
 #import "ParseStarterProjectAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
+#import "CreateInspirationViewController.h"
 #import "SelectFriendViewController.h"
 # import "SplashPageViewController.h"
 
@@ -93,6 +93,12 @@
     [self setUpUsername];
     [self setUpFriends];
     [self listenToMyChannel];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.1 green:0.37 blue:0.67 alpha:1]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance]
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 
     return YES;
 }
@@ -105,7 +111,18 @@
 - (void)setUpFriends {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSArray *myFriends = @[ @"LooseGoose", @"Randell" ];
+    NSArray *myFriends = @[
+                           @"Fernando",
+                           @"Randell",
+                           @"Franky",
+                           @"Josh",
+                           @"Leone",
+                           @"Seph",
+                           @"Taylor",
+                           @"Tiffany",
+                           @"Trish",
+                           @"Tyrone"
+                           ];
     [userDefaults setObject:myFriends forKey:@"friends"];
 }
 

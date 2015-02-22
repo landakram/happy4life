@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -7,8 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectFriendViewController">
             <connections>
-                <outlet property="firstFriendButton" destination="j8u-8l-f8F" id="3fz-dg-QRX"/>
-                <outlet property="secondFriendButton" destination="vqb-c7-Ub5" id="lFA-nD-vQq"/>
+                <outlet property="collectionView" destination="wUk-tK-1TB" id="Zeg-of-sc2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,179 +16,40 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8u-8l-f8F">
-                    <rect key="frame" x="18" y="104" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face1.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-c7-Ub5">
-                    <rect key="frame" x="122" y="104" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face2.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-qc-rsK">
-                    <rect key="frame" x="229" y="104" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face3.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrb-Ev-ceG">
-                    <rect key="frame" x="18" y="210" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face4.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ge6-mV-23W">
-                    <rect key="frame" x="122" y="210" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face5.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1y-JL-Ejb">
-                    <rect key="frame" x="229" y="210" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face6.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-A6-Yhh">
-                    <rect key="frame" x="16" y="315" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face7.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2T-ZE-apq">
-                    <rect key="frame" x="120" y="315" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face8.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9E-eU-SEI">
-                    <rect key="frame" x="227" y="315" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face9.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aE-jN-OYF">
-                    <rect key="frame" x="16" y="418" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face10.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsV-iM-LtK">
-                    <rect key="frame" x="120" y="418" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face11.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-lP-gVw">
-                    <rect key="frame" x="227" y="418" width="75" height="75"/>
-                    <color key="backgroundColor" red="0.92843798519999998" green="0.93800951089999995" blue="0.91886645960000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="face12.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="865-Ld-umT">
-                    <rect key="frame" x="18" y="181" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-Kg-fuE">
-                    <rect key="frame" x="120" y="181" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHp-OA-7QQ">
-                    <rect key="frame" x="227" y="181" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEa-GM-8k6">
-                    <rect key="frame" x="16" y="286" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YV-Mr-HfH">
-                    <rect key="frame" x="120" y="286" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-3e-LG2">
-                    <rect key="frame" x="227" y="286" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8X-R7-x2V">
-                    <rect key="frame" x="16" y="389" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdu-wG-vhB">
-                    <rect key="frame" x="120" y="389" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDJ-Mc-QjX">
-                    <rect key="frame" x="227" y="389" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-SU-RLu">
-                    <rect key="frame" x="16" y="496" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opp-94-YCC">
-                    <rect key="frame" x="121" y="496" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qat-mx-WX4">
-                    <rect key="frame" x="227" y="496" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-Nf-IhG">
+                    <rect key="frame" x="-149" y="-31" width="617" height="630"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wUk-tK-1TB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SU2-tw-cpq">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rpg-qr-eQx"/>
+                        <outlet property="delegate" destination="-1" id="HG9-Rz-Hq9"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PWs-Nf-IhG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-149" id="2aN-nw-vAg"/>
+                <constraint firstItem="wUk-tK-1TB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4R7-kw-CFa"/>
+                <constraint firstItem="PWs-Nf-IhG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-31" id="EPr-vj-TRx"/>
+                <constraint firstAttribute="trailing" secondItem="PWs-Nf-IhG" secondAttribute="trailing" constant="-148" id="GNR-5y-7YZ"/>
+                <constraint firstAttribute="bottom" secondItem="wUk-tK-1TB" secondAttribute="bottom" id="O6a-B5-0Za"/>
+                <constraint firstAttribute="centerX" secondItem="wUk-tK-1TB" secondAttribute="centerX" id="Zad-8j-pR9"/>
+                <constraint firstAttribute="bottom" secondItem="PWs-Nf-IhG" secondAttribute="bottom" constant="-31" id="aw6-Q6-ovV"/>
+                <constraint firstAttribute="trailing" secondItem="wUk-tK-1TB" secondAttribute="trailing" id="fEm-ZM-Ufg"/>
+                <constraint firstAttribute="centerY" secondItem="wUk-tK-1TB" secondAttribute="centerY" id="lfi-7P-bsv"/>
+                <constraint firstItem="wUk-tK-1TB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wPZ-6h-T8J"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="face1.jpg" width="75" height="75"/>
-        <image name="face10.jpg" width="75" height="75"/>
-        <image name="face11.jpg" width="75" height="75"/>
-        <image name="face12.jpg" width="75" height="75"/>
-        <image name="face2.jpg" width="75" height="75"/>
-        <image name="face3.jpg" width="75" height="75"/>
-        <image name="face4.jpg" width="75" height="75"/>
-        <image name="face5.jpg" width="75" height="75"/>
-        <image name="face6.jpg" width="75" height="75"/>
-        <image name="face7.jpg" width="75" height="75"/>
-        <image name="face8.jpg" width="75" height="75"/>
-        <image name="face9.jpg" width="75" height="75"/>
+        <image name="blank_bg.png" width="319" height="551"/>
     </resources>
 </document>

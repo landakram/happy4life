@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class ParseStarterProjectViewController;
+@class CreateInspirationViewController;
 
 @interface ParseStarterProjectAppDelegate : NSObject <UIApplicationDelegate>
 
