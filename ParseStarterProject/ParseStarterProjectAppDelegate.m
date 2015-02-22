@@ -18,6 +18,7 @@
 #import "ParseStarterProjectAppDelegate.h"
 #import "ParseStarterProjectViewController.h"
 #import "SelectFriendViewController.h"
+# import "SplashPageViewController.h"
 
 @implementation ParseStarterProjectAppDelegate
 
@@ -54,9 +55,9 @@
 
     // Override point for customization after application launch.
 
-    SelectFriendViewController *viewController = [[SelectFriendViewController alloc] init];
+    SplashPageViewController *splashViewController = [[SplashPageViewController alloc] init];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:splashViewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 
